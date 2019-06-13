@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VueJS Calendar</title>
+
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- VueJs and MomentJs -->
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/fb59b89237.js"></script>
+
+</head>
+
+<body>
+    <main id="calendar" class="calendar">
+        <div class="calendar-nav">
+            <button @click.prevent="prevMonth()"><i class="fas fa-angle-double-left"></i></button>
+            <select :value="focusedDay.format('MMMM')" @input="onMonthChoice($event.target.value)">
+                <option :value="month" v-for="month in months">{{month + " " + focusedDay.format('YYYY')}}</option>
+            </select>
+            <button @click.prevent="nextMonth()"><i class="fas fa-angle-double-right"></i></button>
+        </div>
+
+        <div class="calendar-header">
+            <div>S</div>
+            <div>M</div>
+            <div>T</div>
+            <div>W</div>
+            <div>T</div>
+            <div>F</div>
+            <div>S</div>
+        </div>
+
+        <ul class="calendar-body">
+            <li v-for="(day, index) in days" :style="{ gridColumn: column(index) }" v-bind:class="{ 'today': today(day), 'selected' : isSelected(day) }"  v-on:mouseover="showPopup = index" v-on:mouseout="showPopup = null">
+                   <span @click.prevent="selectDay(day.format('D MMM YY'))" >{{ day.format('D') }}</span>
+                    <div class="popover" v-bind:class="{'show': showPopup === index}" >
+                        <div class="day-popover" transition="fade">
+                            <button @click.prevent="selectAll(day.format('dddd'))"> <i class="far fa-plus-square"></i> De/Select all {{ day.format('dddd') }}</button>
+                        </div>
+                    </div>
+            </li>
+        </ul>
+        <div class="selection-list" v-if="selectionList.length > 0"> Selected Date  <span v-for="selected in selectionList"> - {{selected}} </span></div>
+
+    </main>
+    <script src="app.js"></script>
+
+
+</body></html>
