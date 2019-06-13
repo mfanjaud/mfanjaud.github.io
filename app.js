@@ -19,10 +19,12 @@ const app = new Vue({
             })
         },
         nextMonth() {
+            // button arrow to go to next month
             this.focusedDay = moment(this.focusedDay).add(1, 'months')
             this.calendarDay()
         },
         prevMonth() {
+            // button arrow to go to previous month
             this.focusedDay = moment(this.focusedDay).subtract(1, 'months')
             this.calendarDay()
         },
@@ -35,17 +37,19 @@ const app = new Vue({
             return moment().isSame(day, 'day')
         },
         isSelected(day) {
+             // compare value of day in v-for loop to add class .selected if in seletionList
             return this.selectionList.includes(day.format('D MMM YY'))
         },
 
         onMonthChoice(event) {
+            // Input watch to set calendarDay
             this.focusedDay = moment().month(event)
             this.calendarDay()
 
             return this.day
         },
         selectDay(val) {
-            
+            // Add one by on days to selectionList 
             if (this.selectionList.includes(val)) {
                 var index = this.selectionList.indexOf(val);
                 this.selectionList.splice(index, 1);
@@ -55,6 +59,7 @@ const app = new Vue({
 
         },
         selectAll(val) {
+            // Add recurrent days to selectionList
             var recurrentDay = this.focusedDay.startOf('month').day(val);
             if (recurrentDay.date() > 7) {
                 recurrentDay.add(7, 'd')
