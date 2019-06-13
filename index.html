@@ -46,7 +46,12 @@
                     </div>
             </li>
         </ul>
-        <div class="selection-list" v-if="selectionList.length > 0"> Selected Date  <span v-for="selected in selectionList"> - {{selected}} </span></div>
+        
+        
+        <div class="selection-list" v-if="selectionList.length > 0"> 
+        <button class="deselect" @click="selectionList = []"> <i class="fas fa-trash"></i> Deselect All </button>
+        
+        Selected Date  <span v-for="selected in selectionList"> - {{selected}} </span></div>
 
     </main>
     <script src="app.js"></script>

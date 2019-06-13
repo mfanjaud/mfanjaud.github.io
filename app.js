@@ -55,7 +55,7 @@ const app = new Vue({
 
         },
         selectAll(val) {
-            var recurrentDay = moment().startOf('month').day(val);
+            var recurrentDay = this.focusedDay.startOf('month').day(val);
             if (recurrentDay.date() > 7) {
                 recurrentDay.add(7, 'd')
             };

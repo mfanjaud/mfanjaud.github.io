@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap");
-/* line 10, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+/* line 10, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
 html,
 body {
   height: 100%;
   width: 100%;
   overflow: hidden; }
 
-/* line 17, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+/* line 17, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
 body {
   align-items: center;
   background: #05386B;
@@ -17,7 +17,7 @@ body {
   justify-content: center;
   padding: 2em; }
 
-/* line 28, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+/* line 28, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
 .calendar {
   display: flex;
   flex-direction: column;
@@ -26,11 +26,11 @@ body {
   max-width: 100vh;
   justify-content: center;
   align-items: center; }
-  /* line 37, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+  /* line 37, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
   .calendar .calendar-nav {
     display: flex;
     margin-bottom: 30px; }
-    /* line 41, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+    /* line 41, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
     .calendar .calendar-nav button {
       background: transparent;
       font-size: 20px;
@@ -39,10 +39,10 @@ body {
       margin: 0 10px;
       outline: 0;
       cursor: pointer; }
-      /* line 50, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+      /* line 50, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
       .calendar .calendar-nav button:hover {
         color: #fa255e; }
-    /* line 57, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+    /* line 57, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
     .calendar .calendar-nav select {
       background-color: #fff;
       border: thin solid blue;
@@ -61,7 +61,7 @@ body {
       background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
       background-size: 5px 5px, 5px 5px, 1px 1.5em;
       background-repeat: no-repeat; }
-      /* line 86, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+      /* line 86, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
       .calendar .calendar-nav select:focus {
         background-image: linear-gradient(45deg, #fa255e 50%, transparent 50%), linear-gradient(135deg, transparent 50%, #fa255e 50%), linear-gradient(to right, #ccc, #ccc);
         background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
@@ -69,7 +69,7 @@ body {
         background-repeat: no-repeat;
         border-color: green;
         outline: 0; }
-  /* line 111, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+  /* line 111, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
   .calendar .calendar-header,
   .calendar .calendar-body {
     display: grid;
@@ -78,37 +78,37 @@ body {
     width: 100%;
     color: white;
     padding: 0; }
-    /* line 120, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+    /* line 120, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
     .calendar .calendar-header > *,
     .calendar .calendar-body > * {
       align-items: center;
       display: flex;
       justify-content: center; }
-  /* line 129, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+  /* line 129, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
   .calendar .calendar-header > * {
     color: #3feee6;
     font-weight: 600;
     font-size: 20px; }
-  /* line 139, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+  /* line 139, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
   .calendar .calendar-body > * {
     border-radius: 100%;
     cursor: pointer;
     position: relative; }
-    /* line 145, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+    /* line 145, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
     .calendar .calendar-body > *::before {
       content: "";
       display: inline-block;
       height: 0;
       padding-bottom: 100%;
       width: 1px; }
-    /* line 153, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+    /* line 153, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
     .calendar .calendar-body > *.today {
       font-weight: 600;
       color: #fa255e; }
-    /* line 158, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+    /* line 158, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
     .calendar .calendar-body > *:hover {
       border: 2px solid #fff; }
-    /* line 162, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+    /* line 162, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
     .calendar .calendar-body > *.selected {
       font-weight: 600;
       background: #fa255e;
@@ -116,7 +116,7 @@ body {
       border: 2px solid #fa255e;
       box-shadow: inset 0px 0px 0px 5px #05386B;
       position: relative; }
-      /* line 172, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+      /* line 172, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
       .calendar .calendar-body > *.selected::after {
         content: "";
         position: absolute;
@@ -124,24 +124,24 @@ body {
         height: 100%;
         width: 100%;
         box-shadow: 0 4px 8px 0 rgba(250, 37, 94, 0.5), 0 6px 20px 0 rgba(250, 37, 94, 0.5); }
-      /* line 181, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+      /* line 181, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
       .calendar .calendar-body > *.selected.today {
         background: #fff;
         border: 2px solid #fff; }
-        /* line 185, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+        /* line 185, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
         .calendar .calendar-body > *.selected.today::after {
           box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5), 0 6px 20px 0 rgba(255, 255, 255, 0.5); }
-      /* line 190, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+      /* line 190, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
       .calendar .calendar-body > *.selected:hover {
         background: #05386B; }
-    /* line 195, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+    /* line 195, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
     .calendar .calendar-body > * > span {
       width: 100%;
       height: 60px;
       line-height: 60px;
       text-align: center;
       z-index: 1; }
-    /* line 203, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+    /* line 203, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
     .calendar .calendar-body > * .popover {
       display: none;
       position: absolute;
@@ -151,7 +151,7 @@ body {
       background: #fff;
       border-radius: 10px;
       z-index: 0; }
-      /* line 213, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+      /* line 213, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
       .calendar .calendar-body > * .popover::after {
         content: '';
         position: absolute;
@@ -162,11 +162,11 @@ body {
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
         border-top: 10px solid #fff; }
-      /* line 225, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+      /* line 225, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
       .calendar .calendar-body > * .popover.show {
         display: flex;
         align-items: center; }
-      /* line 232, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+      /* line 232, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
       .calendar .calendar-body > * .popover button {
         margin: auto;
         border: 0;
@@ -174,8 +174,17 @@ body {
         cursor: pointer;
         font-family: inherit;
         outline: 0; }
-        /* line 240, /Users/mfanjaud/Downloads/Calendar/style/style.scss */
+        /* line 240, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
         .calendar .calendar-body > * .popover button:hover {
           color: #fa255e; }
+  /* line 248, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
+  .calendar .deselect {
+    display: block;
+    margin: 10px auto;
+    background-color: #fff;
+    border: thin solid blue;
+    border-radius: 4px;
+    font: inherit;
+    line-height: 25px; }
 
 /*# sourceMappingURL=style.css.map */
