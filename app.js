@@ -13,20 +13,20 @@ const app = new Vue({
     methods: {
         calendarDay() {
             // load days
-            let monthDate = this.focusedDay.startOf('month')
+            let monthDate = this.focusedDay.startOf('month');
             this.days = [...Array(monthDate.daysInMonth())].map((_, i) => {
                 return monthDate.clone().add(i, 'day')
-            })
+            });
         },
         nextMonth() {
             // button arrow to go to next month
-            this.focusedDay = moment(this.focusedDay).add(1, 'months')
-            this.calendarDay()
+            this.focusedDay = moment(this.focusedDay).add(1, 'months');
+            this.calendarDay();
         },
         prevMonth() {
             // button arrow to go to previous month
-            this.focusedDay = moment(this.focusedDay).subtract(1, 'months')
-            this.calendarDay()
+            this.focusedDay = moment(this.focusedDay).subtract(1, 'months');
+            this.calendarDay();
         },
         column(index) {
             if (index == 0) {
@@ -43,8 +43,8 @@ const app = new Vue({
 
         onMonthChoice(event) {
             // Input watch to set calendarDay
-            this.focusedDay = moment().month(event)
-            this.calendarDay()
+            this.focusedDay = moment().month(event);
+            this.calendarDay();
 
             return this.day
         },
@@ -54,7 +54,7 @@ const app = new Vue({
                 var index = this.selectionList.indexOf(val);
                 this.selectionList.splice(index, 1);
             } else {
-                this.selectionList.push(val)
+                this.selectionList.push(val);
             }
 
         },
@@ -62,18 +62,17 @@ const app = new Vue({
             // Add recurrent days to selectionList
             var recurrentDay = this.focusedDay.startOf('month').day(val);
             if (recurrentDay.date() > 7) {
-                recurrentDay.add(7, 'd')
+                recurrentDay.add(7, 'd');
             };
             var month = recurrentDay.month();
             while (month === recurrentDay.month()) {
-               this.selectDay(recurrentDay.format('D MMM YY'))
-                recurrentDay = recurrentDay.clone().add(7, 'd')
+               this.selectDay(recurrentDay.format('D MMM YY'));
+                recurrentDay = recurrentDay.clone().add(7, 'd');
             }
-                   console.log(this.selectionList)
         }
     },
     mounted() {
-        this.calendarDay()
+        this.calendarDay();
     }
 
 })
