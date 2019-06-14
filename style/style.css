@@ -45,7 +45,6 @@ body {
     /* line 57, /Users/mfanjaud/Documents/GitHub/testUbiTransport/mfanjaud.github.io/style/style.scss */
     .calendar .calendar-nav select {
       background-color: #fff;
-      border: thin solid blue;
       border-radius: 4px;
       display: inline-block;
       font: inherit;
@@ -182,7 +181,6 @@ body {
     display: block;
     margin: 10px auto;
     background-color: #fff;
-    border: thin solid blue;
     border-radius: 4px;
     font: inherit;
     line-height: 25px; }

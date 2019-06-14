@@ -37,21 +37,25 @@
         </div>
 
         <ul class="calendar-body">
-            <li v-for="(day, index) in days" :style="{ gridColumn: column(index) }" v-bind:class="{ 'today': today(day), 'selected' : isSelected(day) }"  v-on:mouseover="showPopup = index" v-on:mouseout="showPopup = null">
-                   <span @click.prevent="selectDay(day.format('D MMM YY'))" >{{ day.format('D') }}</span>
-                    <div class="popover" v-bind:class="{'show': showPopup === index}" >
-                        <div class="day-popover" transition="fade">
-                            <button @click.prevent="selectAll(day.format('dddd'))"> <i class="far fa-plus-square"></i> De/Select all {{ day.format('dddd') }}</button>
-                        </div>
+            <li v-for="(day, index) in days" :style="{ gridColumn: column(index) }" v-bind:class="{ 'today': today(day), 'selected' : isSelected(day) }" v-on:mouseover="showPopup = index" v-on:mouseout="showPopup = null">
+                <span @click.prevent="selectDay(day.format('D MMM YY'))">{{ day.format('D') }}</span>
+                <div class="popover" v-bind:class="{'show': showPopup === index}">
+                    <div class="day-popover" transition="fade">
+                        <button @click.prevent="selectAll(day.format('dddd'))"> <i class="far fa-plus-square"></i> De/Select all {{ day.format('dddd') }}</button>
                     </div>
+                </div>
             </li>
         </ul>
-        
-        
-        <div class="selection-list" v-if="selectionList.length > 0"> 
-        <button class="deselect" @click="selectionList = []"> <i class="fas fa-trash"></i> Deselect All </button>
-        
-        Selected Date  <span v-for="selected in selectionList"> - {{selected}} </span></div>
+
+
+        <div class="selection-list" v-if="selectionList.length > 0">
+            <button class="deselect" @click="selectionList = []"> <i class="fas fa-trash"></i> Deselect All </button>
+            
+            <div>
+                <h5>Selected Date :</h5>
+                <span v-for="(selected, index) in selectionList"> <i v-if="index !== 0">- </i>{{selected}} </span>
+            </div>
+        </div>
 
     </main>
     <script src="app.js"></script>
