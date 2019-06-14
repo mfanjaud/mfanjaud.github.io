@@ -1,3 +1,21 @@
+Vue.component('popover', {
+    props: ['day', 'index', 'showpopup'],
+    template: `
+            <div class="popover" v-bind:class="{'show': showpopup === index}">
+                <div class="day-popover" transition="fade">
+                    <button @click.prevent="selectAll()"> <i class="far fa-plus-square"></i> De/Select all {{ day }}</button>
+                </div>
+            </div>
+`,
+    methods: {
+        selectAll() {
+            this.$emit('select-all')
+        }
+    }
+})
+
+
+
 const app = new Vue({
     el: '#calendar',
     data() {

@@ -39,11 +39,7 @@
         <ul class="calendar-body">
             <li v-for="(day, index) in days" :style="{ gridColumn: column(index) }" v-bind:class="{ 'today': today(day), 'selected' : isSelected(day) }" v-on:mouseover="showPopup = index" v-on:mouseout="showPopup = null">
                 <span @click.prevent="selectDay(day.format('D MMM YY'))">{{ day.format('D') }}</span>
-                <div class="popover" v-bind:class="{'show': showPopup === index}">
-                    <div class="day-popover" transition="fade">
-                        <button @click.prevent="selectAll(day.format('dddd'))"> <i class="far fa-plus-square"></i> De/Select all {{ day.format('dddd') }}</button>
-                    </div>
-                </div>
+                <popover :day="day.format('dddd')" v-on:select-all="selectAll(day.format('dddd'))" :showpopup="showPopup" :index="index"></popover>
             </li>
         </ul>
 
